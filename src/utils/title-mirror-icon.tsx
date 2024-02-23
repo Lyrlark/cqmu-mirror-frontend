@@ -9,6 +9,7 @@ import cpanIcon from '@iconify/icons-file-icons/cpan';
 import debianIcon from '@iconify/icons-simple-icons/debian';
 import deepinIcon from '@iconify/icons-simple-icons/deepin';
 import dockerIcon from '@iconify/icons-simple-icons/docker';
+import epelIcon from '@iconify/icons-simple-icons/epel';
 import fedoraIcon from '@iconify/icons-simple-icons/fedora';
 import gentooIcon from '@iconify/icons-simple-icons/gentoo';
 import gnuIcon from '@iconify/icons-simple-icons/gnu';
@@ -30,6 +31,7 @@ import rosIcon from '@iconify/icons-simple-icons/ros';
 import rustIcon from '@iconify/icons-simple-icons/rust';
 import texIcon from '@iconify/icons-file-icons/latex';
 import ubuntuIcon from '@iconify/icons-simple-icons/ubuntu';
+import nodejsIcon from '@iconify/icons-mdi/nodejs';
 
 export default function TitleMirrorIcon(
   mirrorName: string,
@@ -61,6 +63,8 @@ export default function TitleMirrorIcon(
       return <Icon height={size} icon={debianIcon} color={color} />;
     case 'deepin':
       return <Icon height={size} icon={deepinIcon} color={color} />;
+    case 'epel':
+      return <Icon height={size} icon={epelIcon} color={color} />;
     case 'docker-ce':
       return <Icon height={size} icon={dockerIcon} color={color} />;
     case 'elpa':
@@ -87,6 +91,8 @@ export default function TitleMirrorIcon(
       return <Icon height={size} icon={llvmIcon} color={color} />;
     case 'manjaro':
       return <Icon height={size} icon={manjaroIcon} color={color} />;
+    case 'nodejs-release':
+      return <Icon height={size} icon={nodejsIcon} color={color} />;
     case 'npm':
       return <Icon height={size} icon={npmIcon} color={color} />;
     case 'opensuse':

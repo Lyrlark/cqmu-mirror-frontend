@@ -148,6 +148,11 @@
 			header_down Access-Control-Allow-Origin *
 		}
 	}
+	handle /1GB.bin {
+		file_server {
+			root /mirrors1/
+		}
+	}
 	handle /api/* {
 		reverse_proxy 127.0.0.1:7000 {
 			header_up Host {http.reverse_proxy.upstream.hostport} 

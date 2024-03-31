@@ -46,7 +46,7 @@
 	}
 	handle /apache/* {
 		file_server {
-			root /mirrors1/
+			root /mirrors/
 			browse
 		}
 	}
@@ -76,7 +76,7 @@
 	}
 	handle /ubuntu/* {
 		file_server {
-			root /mirrors1/
+			root /mirrors2/
 			browse
 		}
 	}
@@ -141,10 +141,29 @@
 			browse
 		}
 	}
+	handle /CPAN/* {
+		file_server {
+			root /mirrors1/
+			index index.html
+			browse
+		}
+	}
+	handle /mysql/* {
+		file_server {
+			root /mirrors1/
+			browse
+		}
+	}
+	handle /openeuler/* {
+		file_server {
+			root /mirrors2/
+			browse
+		}
+	}
 	handle /jobs {
 		reverse_proxy 127.0.0.1:12345 {
-			header_up Host {http.reverse_proxy.upstream.hostport} 
-			header_down Access-Control-Allow-Headers * 
+			header_up Host {http.reverse_proxy.upstream.hostport}
+			header_down Access-Control-Allow-Headers *
 			header_down Access-Control-Allow-Origin *
 		}
 	}
@@ -155,8 +174,8 @@
 	}
 	handle /api/* {
 		reverse_proxy 127.0.0.1:7000 {
-			header_up Host {http.reverse_proxy.upstream.hostport} 
-			header_down Access-Control-Allow-Headers * 
+			header_up Host {http.reverse_proxy.upstream.hostport}
+			header_down Access-Control-Allow-Headers *
 			header_down Access-Control-Allow-Origin *
 		}
 	}

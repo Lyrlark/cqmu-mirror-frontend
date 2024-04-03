@@ -32,6 +32,7 @@ import rustIcon from '@iconify/icons-simple-icons/rust';
 import texIcon from '@iconify/icons-file-icons/latex';
 import ubuntuIcon from '@iconify/icons-simple-icons/ubuntu';
 import nodejsIcon from '@iconify/icons-mdi/nodejs';
+import mysqlIcon from '@iconify/icons-logos/mysql-icon';
 
 export default function TitleMirrorIcon(
   mirrorName: string,
@@ -91,6 +92,8 @@ export default function TitleMirrorIcon(
       return <Icon height={size} icon={llvmIcon} color={color} />;
     case 'manjaro':
       return <Icon height={size} icon={manjaroIcon} color={color} />;
+    case 'mysql':
+      return <Icon height={size} icon={mysqlIcon} color={color} />;
     case 'nodejs-release':
       return <Icon height={size} icon={nodejsIcon} color={color} />;
     case 'npm':

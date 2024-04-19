@@ -5,6 +5,7 @@ mirrorId: ubuntu
 import ConfigGenerator from '../../src/components/config-generator'
 
 export const ubuntuVersionMap = {
+    "24.04 LTS": "noble",
     "23.04": "lunar",
     "22.10": "kinetic",
     "22.04 LTS": "jammy",
@@ -64,7 +65,13 @@ amd64(X86_64), i386
 sudo sed -i 's@//.*archive.ubuntu.com@//mirrors.jcut.edu.cn@g' /etc/apt/sources.list
 ```
 
+从 *Ubuntu 24.04 LTS* 开始使用 DEB822 格式，而非上文使用的传统的 One-Line-Style 格式。 对应需要修改的文件为 `/etc/apt/sources.list.d/ubuntu.sources`。同样可以使用如下命令：
+
+```shell
+sudo sed -i 's/archive.ubuntu.com/mirrors.jcut.edu.cn/g' /etc/apt/sources.list.d/ubuntu.sources
+```
+
 #### 方法二
 
-直接编辑 `/etc/apt/sources.list` 文件（需要使用 `sudo`）。
+直接编辑 `/etc/apt/sources.list` （需要使用 `sudo`）。
 <ConfigGenerator promptString="请选择您的 Ubuntu 版本：" versionList={Object.keys(ubuntuVersionMap)} defaultVersion={defaultVersion} configGen={GenUbuntuConfig} language="bash" />

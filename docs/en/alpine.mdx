@@ -1,0 +1,45 @@
+---
+mirrorId: alpine
+---
+
+## Alpine Image Usage Help
+
+### Address
+
+https://mirrors.jcut.edu.cn/alpine/
+
+### Description
+
+Alpine Linux Package Repository
+
+### Included Architectures
+
+x86_64
+
+### Usage Instructions
+
+Under normal circumstances, you can replace the default Alpine source address `http://dl-cdn.alpinelinux.org/` in the `/etc/apk/repositories` file with `http://mirrors.jcut.edu.cn/`.
+
+You may use the following command:
+
+```shell
+sed -i 's/dl-cdn.alpinelinux.org/mirrors.jcut.edu.cn/g' /etc/apk/repositories
+```
+
+Alternatively, you can directly edit the `/etc/apk/repositories` file. Below is the reference configuration for version v3.19:
+
+```text
+https://mirrors.jcut.edu.cn/alpine/v3.19/main
+https://mirrors.jcut.edu.cn/alpine/v3.19/community
+```
+
+You can also use `latest-stable` to point to the latest stable version:
+
+```text
+https://mirrors.jcut.edu.cn/alpine/latest-stable/main
+https://mirrors.jcut.edu.cn/alpine/latest-stable/community
+```
+
+### Note
+
+After changing the `/etc/apk/repositories` file, please run `apk update` to update the index for the changes to take effect.

@@ -1,7 +1,7 @@
-import { PaletteMode, ThemeOptions } from '@mui/material';
+import { PaletteMode, ThemeOptions, createTheme } from '@mui/material';
 import '@fontsource/poppins';
 
-export default function configTheme(mode: PaletteMode): ThemeOptions {
+function configTheme(mode: PaletteMode): ThemeOptions {
   return {
     palette:
       mode === 'light'
@@ -90,6 +90,24 @@ export default function configTheme(mode: PaletteMode): ThemeOptions {
     },
   };
 }
+
+export const lightTheme = createTheme(
+  {
+    palette: {
+      mode: 'light',
+    },
+  },
+  configTheme('light')
+);
+
+export const darkTheme = createTheme(
+  {
+    palette: {
+      mode: 'dark',
+    },
+  },
+  configTheme('dark')
+);
 
 /* the code below decares customized color */
 

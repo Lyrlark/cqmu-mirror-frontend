@@ -1,4 +1,4 @@
-import { Box, Chip, Grid, Link, Typography } from '@mui/material';
+import { Box, Chip, ChipProps, Grid, Link, Typography } from '@mui/material';
 import { graphql } from 'gatsby';
 import { Trans, useI18next } from 'gatsby-plugin-react-i18next';
 import React, { useEffect, useState } from 'react';
@@ -9,7 +9,7 @@ import SearchTable from '../components/search-table';
 import NavBar from '../components/nav-bar';
 import Seo from '../components/seo';
 import ThemeIconButton from '../components/theme-icon-button';
-import { Mirror, MirrorDto } from '../types/mirror';
+import { Locale, Mirror, MirrorDto } from '../types/mirror';
 import frequentlyUsedMirror from '../utils/frequently-used-mirror-list';
 import { getUrl } from '../utils/url';
 import { readCache, writeCache } from '../utils/cache';
@@ -40,7 +40,12 @@ interface Data {
   };
 }
 
-const networkMap = {
+const networkMap: {
+  [value: number]: {
+    text: string;
+    color: ChipProps['color'];
+  };
+} = {
   0: {
     text: '全新版本',
     color: 'primary',
@@ -124,12 +129,13 @@ const Index = ({ data }: { data: Data }) => {
         .filter(d => d.locale === language)
         .map(
           d =>
-            [d.frontmatter.title, new Date(d.frontmatter.date), d.slug] as (
-              | Date
-              | string
-            )[]
+            [d.frontmatter.title, new Date(d.frontmatter.date), d.slug] as [
+              string,
+              Date,
+              string,
+            ]
         )
-        .sort((a, b) => b[1] - a[1]),
+        .sort((a, b) => b[1].getTime() - a[1].getTime()),
     [data, language]
   );
 
@@ -226,17 +232,24 @@ const Index = ({ data }: { data: Data }) => {
             <Typography gutterBottom variant="h5" component="div">
               <Trans>常用镜像</Trans>
             </Typography>
-            <Grid container spacing={{ xs: 2 }} columns={{ xs: 1, sm: 3, md: 6 }}>
+            <Grid
+              container
+              spacing={{ xs: 2 }}
+              columns={{ xs: 1, sm: 3, md: 6 }}
+            >
               {frequentlyUsedMirror.map((e, i) => {
                 const mirror = mirrors[e.id];
                 return (
                   mirror && (
                     <Grid item xs={1} key={i}>
                       <FrequentlyUsedMirrorCard
-                        name={mirror.name[language]}
-                        desc={mirror.desc[language]}
+                        name={mirror.name[language as Locale]}
+                        desc={mirror.desc[language as Locale]}
                         icon={e.icon}
-                        url={getUrl(mirror.docUrl || mirror.url, !!mirror.docUrl)}
+                        url={getUrl(
+                          mirror.docUrl || mirror.url,
+                          !!mirror.docUrl
+                        )}
                       />
                     </Grid>
                   )
@@ -249,8 +262,8 @@ const Index = ({ data }: { data: Data }) => {
               <Trans>近期更新</Trans>
             </Typography>
             <Grid>
-              {newsUrls.map(([title, date, url], _) => (
-                <Grid container>
+              {newsUrls.map(([title, date, url], i) => (
+                <Grid container key={i}>
                   <Link href={url} underline="hover">
                     {title}
                   </Link>

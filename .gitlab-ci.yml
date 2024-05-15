@@ -1,4 +1,6 @@
-image: node:lts-bullseye
+image: 
+  name: node:20
+  pull_policy: if-not-present
 
 stages:
   - build
@@ -8,12 +10,16 @@ gatsby-build:
   stage: build
   variables:
     CHOKIDAR_USEPOLLING: 1
+    GATSBY_TELEMETRY_DISABLED: 1
   cache:
     paths:
-    - node_modules/
+    - .npm/
   script:
-  - bash cached-restore.sh
-  - yarn run build
+  - apt-get update && apt-get install -y libvips42 libvips-dev
+  - npm config set registry https://registry.npmmirror.com
+  - npm install -g npm@10.5.1
+  - npm ci --cache .npm --prefer-offline
+  - npm run build
   artifacts:
     paths:
     - public

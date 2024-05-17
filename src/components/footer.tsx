@@ -43,7 +43,7 @@ export default () => {
                 </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">
                   <Trans>
-                    由JCIOT团队开发运行维护，感谢团队成员YangFan,ZhaoYinghao为本站建设作出的贡献
+                    由JCIOT团队开发运行维护，感谢团队成员YangFan为本站建设作出的贡献
                   </Trans>
                 </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">

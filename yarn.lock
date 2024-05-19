@@ -1779,10 +1779,24 @@
   resolved "https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-2.0.3.tgz#4a2868d75d6d6963e423bcf90b7fd1be343409d3"
   integrity sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==
 
+"@iconify/icons-devicon@^1.2.17":
+  version "1.2.17"
+  resolved "https://registry.npmmirror.com/@iconify/icons-devicon/-/icons-devicon-1.2.17.tgz#f7706c98948cabc5bf36787c9fa316eaae336b4e"
+  integrity sha512-F1f8y8PEBGgDKyisCDuJ++8yeNkvQ5mUKxH0Ts1GJDY5Htv39wQXEgXvwIEltkBH/tb0G0oqGNwAz0WrKG3o/A==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/icons-file-icons@^1.2.3":
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/@iconify/icons-file-icons/-/icons-file-icons-1.2.3.tgz#57a795193a37855728490833465737a51826ebcc"
   integrity sha512-y68vu+pMcxTQ5m3nn5ALhO5XvBaSliBX7ipKynKgAz/EPyPEGdshIZ41HCiv1yniYOf4Gd9oi6L75RbUL8iE1Q==
+  dependencies:
+    "@iconify/types" "*"
+
+"@iconify/icons-grommet-icons@^1.2.5":
+  version "1.2.5"
+  resolved "https://registry.npmmirror.com/@iconify/icons-grommet-icons/-/icons-grommet-icons-1.2.5.tgz#a475f8782ce690409ee986366eeed54fb144d326"
+  integrity sha512-lZ8CWGhcBaNpC/ajBK8gyD/pY1aze7RgKgsPcS3tiJrEZ5jA0TNJVWVQK58OMzYzS97sBsS6/IWyUJvMGBz2Rw==
   dependencies:
     "@iconify/types" "*"
 

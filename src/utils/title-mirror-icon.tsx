@@ -32,7 +32,7 @@ import rustIcon from '@iconify/icons-simple-icons/rust';
 import texIcon from '@iconify/icons-file-icons/latex';
 import ubuntuIcon from '@iconify/icons-simple-icons/ubuntu';
 import nodejsIcon from '@iconify/icons-mdi/nodejs';
-import mysqlIcon from '@iconify/icons-logos/mysql-icon';
+import mysqlIcon from '@iconify/icons-grommet-icons/mysql';
 
 export default function TitleMirrorIcon(
   mirrorName: string,

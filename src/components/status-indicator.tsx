@@ -19,7 +19,7 @@ const statusInfoMap: { [key in MirrorStatus]: StatusInfo } = {
   },
   syncing: {
     content: 'syncing',
-    color: 'warning.main',
+    color: 'info.main',
   },
   failed: {
     content: 'failed',

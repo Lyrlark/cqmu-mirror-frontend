@@ -7,18 +7,18 @@ function configTheme(mode: PaletteMode): ThemeOptions {
       mode === 'light'
         ? {
             primary: {
-              main: '#21a675',
-              light: '#4db790',
-              dark: '#177451',
+              main: '#59c1dc',
+              light: '#79d4d8',
+              dark: '#328dad',
             },
             neutral: {
               main: '#f2f7f9',
             },
             success: {
-              main: '#27a881',
+              main: '#59c1dc',
             },
             warning: {
-              main: '#37adc7',
+              main: '#f8903b',
             },
             info: {
               main: '#6780da',
@@ -33,18 +33,18 @@ function configTheme(mode: PaletteMode): ThemeOptions {
           }
         : {
             primary: {
-              main: '#39DE96',
-              light: '#60e4ab',
-              dark: '#279b69',
+              main: '#79d4d8',
+              light: '#abece4',
+              dark: '#328dad',
             },
             neutral: {
-              main: '#070707',
+              main: '#121212',
             },
             success: {
-              main: '#27a881',
+              main: '#79d4d8',
             },
             warning: {
-              main: '#37adc7',
+              main: '#f8903b',
             },
             info: {
               main: '#6780da',
@@ -54,7 +54,7 @@ function configTheme(mode: PaletteMode): ThemeOptions {
               main: '#e44918',
             },
             background: {
-              default: '#070707',
+              default: '#121212',
               paper: '#161718',
             },
           },

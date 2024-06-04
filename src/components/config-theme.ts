@@ -22,7 +22,7 @@ function configTheme(mode: PaletteMode): ThemeOptions {
             },
             info: {
               main: '#6780da',
-              light: '#63a0cf;',
+              light: '#63a0cf',
             },
             error: {
               main: '#e44918',
@@ -48,7 +48,7 @@ function configTheme(mode: PaletteMode): ThemeOptions {
             },
             info: {
               main: '#6780da',
-              light: '#63a0cf;',
+              light: '#63a0cf',
             },
             error: {
               main: '#e44918',

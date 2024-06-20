@@ -119,6 +119,17 @@ Components: main
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 ```
 
+#### 方法三(一键脚本)
+
+```bash
+# 使用curl
+bash <(curl -sSL http://mirrors.jcut.edu.cn/mirrors.sh)
+# 使用wget
+bash <(wget -qO- http://mirrors.jcut.edu.cn/mirrors.sh)
+
+## 以上使用任一方式均可
+```
+
 #### 注意
 
 更改完 `sources.list` 文件后请运行 `sudo apt-get update` 更新索引以生效。

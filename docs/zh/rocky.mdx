@@ -24,6 +24,8 @@ x86_64, aarch64
 
 ### 使用说明
 
+#### 方法一
+
 对于 Rocky Linux 8，使用以下命令替换默认的配置
 
 ```shell
@@ -47,5 +49,16 @@ sed -e 's|^mirrorlist=|#mirrorlist=|g' \
 ```
 
 以上命令只替换了默认启用的仓库。替换之后请运行 `dnf makecache` 更新缓存。
+
+#### 方法二(一键脚本)
+
+```bash
+# 使用curl
+bash <(curl -sSL http://mirrors.jcut.edu.cn/mirrors.sh)
+# 使用wget
+bash <(wget -qO- http://mirrors.jcut.edu.cn/mirrors.sh)
+
+## 以上使用任一方式均可
+```
 
 > 本项文档参照 http://mirrors.ustc.edu.cn/help/rocky.html 编写。

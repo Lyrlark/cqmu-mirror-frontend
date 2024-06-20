@@ -22,8 +22,21 @@ x86_64
 
 可以使用如下命令：
 
+#### 方法一
+
 ```shell
 sed -i 's/dl-cdn.alpinelinux.org/mirrors.jcut.edu.cn/g' /etc/apk/repositories
+```
+
+#### 方法二(一键脚本)
+
+```bash
+# 使用curl
+bash <(curl -sSL http://mirrors.jcut.edu.cn/mirrors.sh)
+# 使用wget
+bash <(wget -qO- http://mirrors.jcut.edu.cn/mirrors.sh)
+
+## 以上使用任一方式均可
 ```
 
 也可以直接编辑 `/etc/apk/repositories` 文件。以下是 v3.20 版本的参考配置：

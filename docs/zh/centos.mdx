@@ -20,27 +20,28 @@ CentOS 软件源
 x86_64, aarch64, ppc64le
 
 ### 收录版本
-7, 8 Stream
+7
 
 #### 注意
 
-> CentOS 8（非 Stream 版本）已被官方移除出该仓库。
+> CentOS 8（含 Stream 版本）已被官方移除出该仓库。
 
 ---
 
 ### 使用说明
 
-对于 CentOS 8 Stream，使用以下命令替换默认的配置
+#### 方法一(一键脚本)
 
-```shell
-sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' \
-         -e 's|^#baseurl=http://mirror.centos.org/$contentdir|baseurl=https://mirrors.jcut.edu.cn/centos|g' \
-         -i.bak \
-         /etc/yum.repos.d/CentOS-Stream-AppStream.repo \
-         /etc/yum.repos.d/CentOS-Stream-BaseOS.repo \
-         /etc/yum.repos.d/CentOS-Stream-Extras.repo \
-         /etc/yum.repos.d/CentOS-Stream-PowerTools.repo
+```bash
+# 使用curl
+bash <(curl -sSL http://mirrors.jcut.edu.cn/mirrors.sh)
+# 使用wget
+bash <(wget -qO- http://mirrors.jcut.edu.cn/mirrors.sh)
+
+## 以上使用任一方式均可
 ```
+
+#### 方法二
 
 对于 CentOS 7，使用以下命令替换默认配置
 

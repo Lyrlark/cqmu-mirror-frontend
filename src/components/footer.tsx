@@ -71,7 +71,7 @@ export default () => {
                 container
                 direction="row"
                 justifyContent="flex-start"
-                alignItems="flex-end"
+                alignItems="flex-start"
                 columnSpacing={8}
               >
                 <Grid item>
@@ -127,6 +127,15 @@ export default () => {
                       underline="hover"
                     >
                       <Trans>荆楚理工学院信息化办公室</Trans>
+                    </Link>
+                  </Typography>
+                  <Typography gutterBottom variant="body2">
+                    <Link
+                      href="https://www.zjusct.io/"
+                      underline="hover"
+                      color="text.secondary"
+                    >
+                      <Trans>浙江大学ZJUSCT</Trans>
                     </Link>
                   </Typography>
                   <Typography gutterBottom variant="body2">

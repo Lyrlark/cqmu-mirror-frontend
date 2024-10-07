@@ -32,6 +32,7 @@ import rustIcon from '@iconify/icons-simple-icons/rust';
 import texIcon from '@iconify/icons-file-icons/latex';
 import ubuntuIcon from '@iconify/icons-simple-icons/ubuntu';
 import nodejsIcon from '@iconify/icons-mdi/nodejs';
+import nginxIcon from '@iconify/icons-simple-icons/nginx';
 import mysqlIcon from '@iconify/icons-grommet-icons/mysql';
 
 export default function TitleMirrorIcon(
@@ -98,6 +99,8 @@ export default function TitleMirrorIcon(
       return <Icon height={size} icon={nodejsIcon} color={color} />;
     case 'npm':
       return <Icon height={size} icon={npmIcon} color={color} />;
+    case 'nginx':
+      return <Icon height={size} icon={nginxIcon} color={color} />;
     case 'opensuse':
       return <Icon height={size} icon={openSuseIcon} color={color} />;
     case 'openwrt':

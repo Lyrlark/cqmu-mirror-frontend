@@ -1,9 +1,8 @@
-![cover](https://raw.githubusercontent.com/Kxsso/jcutmirror/master/resource/icons/nav.png)
+# 重庆医科大学开源镜像站
 
-# 荆楚理工学院开源镜像站
+重庆医科大学开源镜像站是一个致力于助力开发者生长，方便荆楚校内外师生高效访问开源资源的非盈利计划。
+我们旨在推动开源事业发展与提高西南地区开发资源可访问速度。
 
-荆楚理工学院开源镜像站是一个致力于助力开发者生长，方便荆楚校内外师生高效访问开源资源的非盈利计划。
-我们旨在推动开源事业发展与提高华中地区开发资源可访问速度。
 ## Deployment
 本站使用基于REACT的GatsByJS构建页面。
 All static files must be mapped to `/static/*`.  
@@ -13,7 +12,7 @@ All static files must be mapped to `/static/*`.
 感谢ZJUSCT与TUNA为国内开源生态作出的伟大贡献
 UI Designer: [Rynco Maekawa](https://github.com/lynzrand)  
 
-## nstalling / Getting started
+## Installing / Getting started
 `yarn` 
 
 ## Developing

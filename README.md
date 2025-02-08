@@ -23,4 +23,11 @@ or if you need:
 `yarn only-build (Temporary solution）`
 `yarn run serve`
 
+## Standard
+
+### git
+
+使用Angular风格的commit message及其规范，参考[Angular Commit Message Conventions](https://zj-git-guide.readthedocs.io/zh-cn/latest/message/Angular%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E8%A7%84%E8%8C%83/)
+
+
 Please refer to package.json if you want to learn more

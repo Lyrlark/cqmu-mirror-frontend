@@ -11,7 +11,7 @@ import Seo from '../components/seo';
 import ThemeIconButton from '../components/theme-icon-button';
 import { Locale, Mirror, MirrorDto } from '~/types/mirror';
 import frequentlyUsedMirror from '../utils/frequently-used-mirror-list';
-import { getUrl } from '../utils/url';
+import { getUrl } from '~/utils/url';
 import { readCache, writeCache } from '~/utils/cache';
 import NameIconButton from '../components/name-icon-button';
 import Icon from '../../resource/icons/favicon.svg';
@@ -47,7 +47,7 @@ const networkMap: {
   };
 } = {
   0: {
-    text: '校外网络',
+    text: 'CERNET',
     color: 'success',
   },
   1: {
@@ -284,6 +284,22 @@ const Index = ({ data }: { data: Data }) => {
         <Footer />
       </Box>
       <NavBar data={Object.values(mirrors)} />
+      <p style={{ textAlign: 'center', padding: '1rem' }}>
+        版权所有 © 重庆医科大学 |
+
+        <Link
+          underline="hover"
+          href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50009802000810"
+          target="_blank"
+        >
+
+          渝公网安备50009802000810号
+        </Link>
+
+        <Link href="https://beian.miit.gov.cn/" underline="hover" target="_blank">
+          渝ICP备12000838号-1
+        </Link>
+      </p>
     </>
   );
 };

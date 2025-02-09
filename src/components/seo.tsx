@@ -5,6 +5,7 @@ import { useI18next } from 'gatsby-plugin-react-i18next';
 
 type MetaProps = React.JSX.IntrinsicElements['meta'];
 
+// @ts-ignore
 const Helmet: React.FC = ({children, title, meta}) => {
   const {languages, language, originalPath, defaultLanguage, siteUrl = ''} = useI18next();
   const createUrlWithLang = (lng: string) => {
@@ -92,5 +93,6 @@ export default ({ description, meta = [], title }: SeoProps) => {
     },
   ];
 
+  // @ts-ignore
   return <Helmet title={metaTitle} meta={defaultMeta.concat(meta)} />;
 };

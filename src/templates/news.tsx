@@ -20,6 +20,7 @@ interface Data {
   };
 }
 
+// @ts-ignore TODO: data format check
 const News = ({ data, children }: { data: Data }) => {
   const { language } = useI18next();
 
@@ -39,7 +40,7 @@ const News = ({ data, children }: { data: Data }) => {
         justifyContent: 'space-between',
       }}
     >
-      <Seo title={`${news.title} | 镜像站新闻 | JCUT Mirror`} />
+      <Seo title={`${news.title} | 镜像站新闻 | CQMU Mirror`} />
       <Box>
         <Box sx={{ px: { xs: 4, sm: 8 }, py: 4 }}>
           <Grid
@@ -53,7 +54,7 @@ const News = ({ data, children }: { data: Data }) => {
               <Grid container justifyContent="space-between">
                 <Link color="primary" underline="hover" to="/">
                   <Typography variant="h5" component="div" color="primary">
-                    <Trans>JCUT Mirror</Trans>
+                    <Trans>CQMU Mirror</Trans>
                   </Typography>
                 </Link>
                 <Grid item>

@@ -66,6 +66,9 @@ const MirrorDoc = ({ data, children }: PropsWithChildren<MirrorDocProps>) => {
   const mirrorUrl = getUrl(mirror.url ?? fallbackUrl, false);
 
   const name = mirror.name[language as Locale];
+  // @ts-ignore
+  // @ts-ignore
+  // @ts-ignore
   return <Box
     sx={{
       minHeight: '100vh',
@@ -74,7 +77,7 @@ const MirrorDoc = ({ data, children }: PropsWithChildren<MirrorDocProps>) => {
       justifyContent: 'space-between',
     }}
   >
-    <Seo title={`${name} | JCUT Mirror`} />
+    <Seo title={`${name} | CQMU Mirror`} />
     <Box>
       <Box sx={{ px: { xs: 4, sm: 8 }, py: 4 }} position="relative">
         <Grid
@@ -88,7 +91,7 @@ const MirrorDoc = ({ data, children }: PropsWithChildren<MirrorDocProps>) => {
             <Grid container justifyContent="space-between">
               <Link color="primary" underline="hover" to="/">
                 <Typography variant="h5" component="div" color="primary">
-                  <Trans>JCUT Mirror</Trans>
+                  <Trans>CQMU Mirror</Trans>
                 </Typography>
               </Link>
               <Grid item>

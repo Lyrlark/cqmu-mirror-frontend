@@ -286,17 +286,19 @@ const Index = ({ data }: { data: Data }) => {
       <NavBar data={Object.values(mirrors)} />
       <p style={{ textAlign: 'center', padding: '1rem' }}>
         版权所有 © 重庆医科大学 |
-
         <Link
           underline="hover"
           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50009802000810"
           target="_blank"
         >
-
           渝公网安备50009802000810号
         </Link>
-
-        <Link href="https://beian.miit.gov.cn/" underline="hover" target="_blank">
+        |
+        <Link
+          href="https://beian.miit.gov.cn/"
+          underline="hover"
+          target="_blank"
+        >
           渝ICP备12000838号-1
         </Link>
       </p>

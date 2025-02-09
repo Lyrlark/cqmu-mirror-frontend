@@ -49,15 +49,25 @@ export default () => {
                     许可下发布，相关源码及创作内容可在 GitHub 获取。
                   </Trans>
                 </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  <Trans>
+                    根据相关法律法规，本站部分内容对校外公网访问用户提供服务时会进行网络审查，请勿使用IDM等多线程下载器或代理等。
+                  </Trans>
+                </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">
-                  <Link href="https://github.com/PGuideStudio/cqmu-mirror-frontend/issues" color="text.secondary" underline="hover">
-                    <OpenInNewIcon sx={{ mr: 1 }}/>
-                    <Trans>问题反馈与镜像请求（GitHub）</Trans>
+                  <Link
+                    href="https://github.com/PGuideStudio/cqmu-mirror-frontend/issues"
+                    color="text.secondary"
+                    underline="hover"
+                  >
+                    <br />
+
+                    <Trans>
+                      问题反馈与镜像请求（GitHub）
+                      <OpenInNewIcon sx={{ mr: -1 }} />
+                    </Trans>
                   </Link>
                 </Typography>
-                {/*<Typography variant="body2" color="text.secondary">*/}
-                {/*  <Trans>根据相关法律法规，本站部分内容仅对校内用户提供服务</Trans>*/}
-                {/*</Typography>*/}
               </Box>
             </Grid>
             <Grid item xs={2} md={1}>
@@ -197,7 +207,6 @@ export default () => {
                 <PSNW width="16rem" />
               </Link>
             </Grid>
-
           </Grid>
         </Grid>
       </Grid>

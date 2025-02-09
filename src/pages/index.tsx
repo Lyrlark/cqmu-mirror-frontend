@@ -9,12 +9,12 @@ import SearchTable from '../components/search-table';
 import NavBar from '../components/nav-bar';
 import Seo from '../components/seo';
 import ThemeIconButton from '../components/theme-icon-button';
-import { Locale, Mirror, MirrorDto } from '../types/mirror';
+import { Locale, Mirror, MirrorDto } from '~/types/mirror';
 import frequentlyUsedMirror from '../utils/frequently-used-mirror-list';
 import { getUrl } from '../utils/url';
-import { readCache, writeCache } from '../utils/cache';
+import { readCache, writeCache } from '~/utils/cache';
 import NameIconButton from '../components/name-icon-button';
-import JcutFalconIcon from '../../resource/icons/favicon.svg';
+import Icon from '../../resource/icons/favicon.svg';
 
 interface Data {
   mirrorDocs: {
@@ -47,8 +47,8 @@ const networkMap: {
   };
 } = {
   0: {
-    text: '全新版本',
-    color: 'primary',
+    text: '校外网络',
+    color: 'success',
   },
   1: {
     text: '校内网络 - IPv4',
@@ -150,7 +150,7 @@ const Index = ({ data }: { data: Data }) => {
           scrollBehavior: 'smooth',
         }}
       >
-        <Seo title="JCUT Mirror" />
+        <Seo title="CQMU Mirror" />
         <Grid
           container
           spacing={{ xs: 6 }}
@@ -170,9 +170,9 @@ const Index = ({ data }: { data: Data }) => {
                   maxWidth: { xs: 54, sm: 72 },
                 }}
               >
-                <JcutFalconIcon />
+                <Icon />
               </Box>
-              <Box sx={{ width: '100%', ml: 2 }}>
+              <Box sx={{ width: '90%', ml: 5 }}>
                 <Grid
                   container
                   direction="row"
@@ -184,9 +184,9 @@ const Index = ({ data }: { data: Data }) => {
                       variant="h1"
                       component="div"
                       color="primary"
-                      sx={{ fontSize: { xs: 48, sm: 64 }, mt: -1 }}
+                      sx={{ fontSize: { xs: 48, sm: 64 }, mt: 0 }}
                     >
-                      <Trans>JCUTMirror</Trans>
+                      <Trans>CQMU Mirror</Trans>
                     </Typography>
                   </Grid>
                   <Grid item sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -209,7 +209,7 @@ const Index = ({ data }: { data: Data }) => {
                     color="primary"
                     sx={{ fontSize: { xs: 21, sm: 28 } }}
                   >
-                    <Trans>荆楚理工学院开源镜像站</Trans>
+                    <Trans>重庆医科大学开源镜像站</Trans>
                   </Typography>
                   <Typography
                     variant="subtitle1"

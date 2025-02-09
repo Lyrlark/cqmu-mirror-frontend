@@ -7,15 +7,15 @@ function configTheme(mode: PaletteMode): ThemeOptions {
       mode === 'light'
         ? {
             primary: {
-              main: '#FFAD84',
+              main: '#137b55',
               light: '#FFE382',
-              dark: '#FFAD84',
+              dark: '#137b55',
             },
             neutral: {
               main: '#f2f7f9',
             },
             success: {
-              main: '#FFC47E',
+              main: '#38af8b',
             },
             warning: {
               main: '#EF9595',
@@ -33,25 +33,25 @@ function configTheme(mode: PaletteMode): ThemeOptions {
           }
         : {
             primary: {
-              main: '#FFAD84',
+              main: '#137b55',
               light: '#FFE382',
-              dark: '#FFAD84',
+              dark: '#137b55',
             },
             neutral: {
               main: '#121212',
             },
             success: {
-              main: '#FFC47E',
+              main: '#38AF8B',
             },
             warning: {
               main: '#FFA732',
             },
             info: {
-              main: '#E48586',
-              light: '#FCBAAD',
+              main: '#006c93',
+              light: '#3fa6ed',
             },
             error: {
-              main: '#C23373',
+              main: '#f13030',
             },
             background: {
               default: '#121212',

@@ -3,13 +3,12 @@ import { Trans } from 'gatsby-plugin-react-i18next';
 import React from 'react';
 import JCIOT from '../../resource/icons/jciot.svg';
 import JCUT from '../../resource/icons/jcut.svg';
-import JcutDark from '../../resource/icons/jcut-dark.svg';
-import { useTheme } from '@mui/material';
+import EmailIcon from '@mui/icons-material/Email';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import BlogIcon from '@mui/icons-material/Description';
+import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 
 export default () => {
-  const theme = useTheme();
-  const JCUTIcon = theme.palette.mode === 'light' ? JCUT : JcutDark;
-
   return (
     <Box sx={{ px: { xs: 4, sm: 8 }, py: 6 }}>
       <Grid
@@ -30,40 +29,35 @@ export default () => {
             columnSpacing={8}
           >
             <Grid item xs={2} md={1}>
+              <Trans>关于重庆医科大学开源镜像站</Trans>
               <Box maxWidth={520}>
                 <Typography gutterBottom variant="body2" color="text.secondary">
                   <Trans>
-                    荆楚理工学院开源镜像站是一个致力于助力开发者开发，方便荆楚校内外师生高效访问开源资源的非盈利计划。
+                    重庆医科大学开源软件镜像站是一个致力于助力开发者开发，方便重医校内外师生高效访问开源资源的非盈利计划。
                   </Trans>
                 </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">
                   <Trans>
-                    本站由荆楚理工学院信息化办公室支持创办
-                  </Trans>
-                </Typography>
-                <Typography gutterBottom variant="body2" color="text.secondary">
-                  <Trans>
-                    由JCIOT团队开发运行维护，感谢团队成员YangFan为本站建设作出的贡献
+                    本站由医学信息学院办公室、校信息中心支持创办。由项导工作室开发运行维护，感谢团队成员rand777、Alien_Chen、DkWms为本站建设作出的贡献。
                   </Trans>
                 </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">
                   <Trans>
                     本站基于浙江大学ZJUSCT开源的mirror-front与清华大学TUNA开源的tunasync项目，感谢ZJUSCT与TUNA为国内开源生态作出的伟大贡献
-                    除特殊注明外，本站源码在 Apache License 2.0 许可下发布，本站创作内容均在 CC BY-NC-SA 4.0 许可下发布，相关源码及创作内容可在 GitHub 获取。
+                    除特殊注明外，本站源码在 Apache License 2.0
+                    许可下发布，本站创作内容均在 CC BY-NC-SA 4.0
+                    许可下发布，相关源码及创作内容可在 GitHub 获取。
                   </Trans>
                 </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">
-                  <Link
-                    href="https://github.com/JCIOTeam/ISSUE"
-                    color="text.secondary"
-                    underline="hover"
-                  >
+                  <Link href="https://github.com/PGuideStudio/cqmu-mirror-frontend/issues" color="text.secondary" underline="hover">
+                    <OpenInNewIcon sx={{ mr: 1 }}/>
                     <Trans>问题反馈与镜像请求（GitHub）</Trans>
                   </Link>
                 </Typography>
-                <Typography variant="body2" color="text.secondary">
-                  <Trans>根据相关法律法规，本站部分内容仅对校内用户提供服务。</Trans>
-                </Typography>
+                {/*<Typography variant="body2" color="text.secondary">*/}
+                {/*  <Trans>根据相关法律法规，本站部分内容仅对校内用户提供服务</Trans>*/}
+                {/*</Typography>*/}
               </Box>
             </Grid>
             <Grid item xs={2} md={1}>
@@ -81,32 +75,38 @@ export default () => {
                     color="text.secondary"
                     fontWeight={700}
                   >
-                    <Trans>关于我们-JCIOT团队</Trans>
+                    <Trans>关于项导工作室</Trans>
                   </Typography>
                   <Typography gutterBottom variant="body2">
                     <Link
-                      href="mailto:stucloud@jcut.edu.cn"
+                      href="mailto:contact@pguide.studio"
                       color="text.secondary"
                       underline="hover"
+                      sx={{ display: 'flex', alignItems: 'center' }}
                     >
+                      <EmailIcon sx={{ mr: 1 }} />
                       <Trans>Email</Trans>
                     </Link>
                   </Typography>
                   <Typography gutterBottom variant="body2">
                     <Link
-                      href="https://github.com/JCIOTeam"
+                      href="https://github.com/PGuideStudio"
                       color="text.secondary"
                       underline="hover"
+                      sx={{ display: 'flex', alignItems: 'center' }}
                     >
+                      <GitHubIcon sx={{ mr: 1 }} />
                       <Trans>GitHub</Trans>
                     </Link>
                   </Typography>
                   <Typography gutterBottom variant="body2">
                     <Link
-                      href="https://www.jciot.cc"
+                      href="https://blog.pguide.studio"
                       color="text.secondary"
                       underline="hover"
+                      sx={{ display: 'flex', alignItems: 'center' }}
                     >
+                      <BlogIcon sx={{ mr: 1 }} />
                       <Trans>Blog</Trans>
                     </Link>
                   </Typography>
@@ -122,11 +122,20 @@ export default () => {
                   </Typography>
                   <Typography gutterBottom variant="body2">
                     <Link
-                      href="https://net.jcut.edu.cn/"
+                      href="https://cnw.cqmu.edu.cn"
                       color="text.secondary"
                       underline="hover"
                     >
-                      <Trans>荆楚理工学院信息化办公室</Trans>
+                      <Trans>重庆医科大学信息中心</Trans>
+                    </Link>
+                  </Typography>
+                  <Typography gutterBottom variant="body2">
+                    <Link
+                      href="https://mi.cqmu.edu.cn"
+                      color="text.secondary"
+                      underline="hover"
+                    >
+                      <Trans>医学信息学院学生工作办公室</Trans>
                     </Link>
                   </Typography>
                   <Typography gutterBottom variant="body2">
@@ -162,15 +171,21 @@ export default () => {
           </Grid>
         </Grid>
         <Grid item>
-          <Grid container direction="row" columnSpacing={4} rowSpacing={2} alignItems="center">
+          <Grid
+            container
+            direction="row"
+            columnSpacing={4}
+            rowSpacing={2}
+            alignItems="center"
+          >
             <Grid item>
               <Link href="https://net.jcut.edu.cn/">
-                <JCUT width="16rem"/>
+                <JCUT width="16rem" />
               </Link>
             </Grid>
             <Grid item>
               <Link href="https://www.jciot.cc">
-                <JCIOT width="14rem"/>
+                <JCIOT width="14rem" />
               </Link>
             </Grid>
           </Grid>

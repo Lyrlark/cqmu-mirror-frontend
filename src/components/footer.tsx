@@ -1,8 +1,8 @@
 import { Box, Grid, Link, Typography } from '@mui/material';
 import { Trans } from 'gatsby-plugin-react-i18next';
 import React from 'react';
-import JCIOT from '../../resource/icons/jciot.svg';
-import JCUT from '../../resource/icons/jcut.svg';
+import CQMUcnw from '../../resource/icons/CQMUcnw.svg';
+import PSNW from '../../resource/icons/PSNW.svg';
 import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import BlogIcon from '@mui/icons-material/Description';
@@ -144,7 +144,7 @@ export default () => {
                       underline="hover"
                       color="text.secondary"
                     >
-                      <Trans>浙江大学ZJUSCT</Trans>
+                      <Trans>浙江大学超算团队ZJUSCT</Trans>
                     </Link>
                   </Typography>
                   <Typography gutterBottom variant="body2">
@@ -154,6 +154,15 @@ export default () => {
                       underline="hover"
                     >
                       <Trans>清华大学 TUNA 协会</Trans>
+                    </Link>
+                  </Typography>
+                  <Typography gutterBottom variant="body2">
+                    <Link
+                      href="https://sls.westlake.edu.cn/"
+                      color="text.secondary"
+                      underline="hover"
+                    >
+                      <Trans>西湖大学超算集群</Trans>
                     </Link>
                   </Typography>
                   <Typography gutterBottom variant="body2">
@@ -179,15 +188,16 @@ export default () => {
             alignItems="center"
           >
             <Grid item>
-              <Link href="https://net.jcut.edu.cn/">
-                <JCUT width="16rem" />
+              <Link href="https://mi.cqmu.edu.cn/">
+                <CQMUcnw width="16rem" />
               </Link>
             </Grid>
             <Grid item>
-              <Link href="https://www.jciot.cc">
-                <JCIOT width="14rem" />
+              <Link href="https://www.pguide.studio">
+                <PSNW width="16rem" />
               </Link>
             </Grid>
+
           </Grid>
         </Grid>
       </Grid>

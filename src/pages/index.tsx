@@ -285,16 +285,17 @@ const Index = ({ data }: { data: Data }) => {
       </Box>
       <NavBar data={Object.values(mirrors)} />
       <p style={{ textAlign: 'center', padding: '1rem' }}>
-        版权所有 © 重庆医科大学 |
+        版权所有 © 重庆医科大学
         <Link
+          paddingLeft="1em"
           underline="hover"
           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=50009802000810"
           target="_blank"
         >
           渝公网安备50009802000810号
         </Link>
-        |
         <Link
+          paddingLeft="1em"
           href="https://beian.miit.gov.cn/"
           underline="hover"
           target="_blank"

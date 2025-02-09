@@ -38,7 +38,7 @@ export default () => {
                 </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">
                   <Trans>
-                    本站由医学信息学院办公室、校信息中心支持创办。由项导工作室开发运行维护，感谢团队成员rand777、Alien_Chen、DkWms为本站建设作出的贡献。
+                    本站由医学信息学院办公室、校信息中心支持创办。由项导工作室开发运行维护，感谢团队成员rand777、Alien_Chen、Dkwms为本站建设作出的贡献。
                   </Trans>
                 </Typography>
                 <Typography gutterBottom variant="body2" color="text.secondary">

@@ -21,8 +21,8 @@ function configTheme(mode: PaletteMode): ThemeOptions {
               main: '#EF9595',
             },
             info: {
-              main: '#E48586',
-              light: '#FCBAAD',
+              main: '#63aef7',
+              light: '#0073e6',
             },
             error: {
               main: '#C23373',

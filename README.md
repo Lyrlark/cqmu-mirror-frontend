@@ -15,7 +15,7 @@
 
 设置淘宝镜像源
 
-`npm config set registry https://registry.npm.taobao.org`
+`npm config set registry https://registry.npmmirror.com`
 
 查看是否设置成功
 

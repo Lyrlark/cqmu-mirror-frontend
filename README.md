@@ -120,3 +120,5 @@ windows下载后使用python3运行即可
 本站基于浙江大学ZJUSCT开源的mirror-front与清华大学TUNA开源的tunasync项目，感谢ZJUSCT与TUNA为国内开源生态作出的伟大贡献
 
 UI 设计师: [Rynco Maekawa](https://github.com/lynzrand)
+
+Updated on 2025-03-26
